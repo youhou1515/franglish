@@ -3,10 +3,13 @@ package franglish.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import franglish.bean.MotBean;
 import franglish.bean.ThemeBean;
 import franglish.webservice.ResultatWebService;
 
+@Repository
 public class VocabulaireDaoImpl implements VocabulaireDao {
 
 	@Override

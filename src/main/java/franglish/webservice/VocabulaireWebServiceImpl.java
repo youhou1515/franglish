@@ -4,15 +4,19 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import franglish.bean.ThemeBean;
 import franglish.service.VocabulaireService;
 
 
-
+@Service(value="vocabulaireWebService")
 @WebService(endpointInterface = "franglish.webservice.VocabulaireWebService", serviceName = "vocabulaireWebService")
 public class VocabulaireWebServiceImpl implements VocabulaireWebService {
 	
-	VocabulaireService vocabulaireService;
+	@Autowired
+	private VocabulaireService vocabulaireService;
 
 	@Override
 	public void viderToutLeVocabulaire() {
@@ -34,6 +38,7 @@ public class VocabulaireWebServiceImpl implements VocabulaireWebService {
 		return vocabulaireService.getListTheme();
 	}
 
+	
 	public void setVocabulaireService(VocabulaireService vocabulaireService) {
 		this.vocabulaireService = vocabulaireService;
 	}

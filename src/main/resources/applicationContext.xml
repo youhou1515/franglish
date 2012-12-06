@@ -6,8 +6,8 @@
 		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
-	<!-- <context:component-scan base-package="franglish"></context:component-scan> -->
-
+	<context:component-scan base-package="franglish"></context:component-scan>
+	<context:annotation-config />
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
@@ -20,29 +20,22 @@
 		address="/authentification">
 	</jaxws:endpoint>
 
-	<jaxws:endpoint id="vocabulaire"
-		implementor="#vocabulaireWebService" address="/vocabulaire">
+	<jaxws:endpoint id="vocabulaire" implementor="#vocabulaireWebService"
+		address="/vocabulaire">
 	</jaxws:endpoint>
 
 
 	<!-- *********************************************************************************** -->
+
+	<!-- <bean id="vocabulaireWebService" class="franglish.webservice.VocabulaireWebServiceImpl" /> -->
 	
-
-	<bean id="vocabulaireWebService" class="franglish.webservice.VocabulaireWebServiceImpl">
-		<property name="vocabulaireService" ref="vocabulaireService"></property>
-	</bean>
-
-	<bean id="vocabulaireService" class="franglish.service.VocabulaireServiceImpl">
-		<property name="vocabulaireMetier" ref="vocabulaireMetier"></property>
-	</bean>
-
-	<bean id="vocabulaireMetier" class="franglish.metier.VocabulaireMetierImpl">
-		<property name="vocabulaireDao" ref="vocabulaireDao"></property>
-	</bean>
-
-	<bean id="vocabulaireDao" class="franglish.dao.VocabulaireDaoImpl">
-	</bean>
-
+	<!-- <bean id="vocabulaireWebService" class="franglish.webservice.VocabulaireWebServiceImpl"> 
+		<property name="vocabulaireService" ref="vocabulaireService"></property> 
+		</bean> <bean id="vocabulaireService" class="franglish.service.VocabulaireServiceImpl"> 
+		<property name="vocabulaireMetier" ref="vocabulaireMetier"></property> </bean> 
+		<bean id="vocabulaireMetier" class="franglish.metier.VocabulaireMetierImpl"> 
+		<property name="vocabulaireDao" ref="vocabulaireDao"></property> </bean> 
+		<bean id="vocabulaireDao" class="franglish.dao.VocabulaireDaoImpl"> </bean> -->
 
 
 

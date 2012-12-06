@@ -2,13 +2,18 @@ package franglish.metier;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import franglish.bean.MotBean;
 import franglish.bean.ThemeBean;
 import franglish.dao.VocabulaireDao;
 import franglish.webservice.ResultatWebService;
 
+@Component
 public class VocabulaireMetierImpl implements VocabulaireMetier {
 
+	@Autowired
 	VocabulaireDao vocabulaireDao;
 
 	public VocabulaireDao getVocabulaireDao() {
