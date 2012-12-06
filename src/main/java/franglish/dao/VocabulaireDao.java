@@ -1,16 +1,16 @@
-package metier;
+package franglish.dao;
 
 import java.util.List;
 
-import wsimplementation.ResultatService;
-import bean.MotBean;
-import bean.ThemeBean;
+import franglish.bean.MotBean;
+import franglish.bean.ThemeBean;
+import franglish.webservice.ResultatWebService;
 
-public interface VocabulaireMetier {
 
+public interface VocabulaireDao {
 
 	public void viderToutLeVocabulaire();
-		
+	
 
 	public List<ThemeBean> getListTheme();
 	
@@ -20,13 +20,13 @@ public interface VocabulaireMetier {
 	public ThemeBean getTheme(String pTheme);
 	
 
-	public ResultatService addTheme(String pTheme);
+	public ResultatWebService addTheme(String pTheme);
 	
 
-	public ResultatService deleteTheme(String pTheme);
+	public ResultatWebService deleteTheme(String pTheme);
 	
 
-	public ResultatService modifyTheme(String pThemeOld, String pThemeNew);
+	public ResultatWebService modifyTheme(String pThemeOld, String pThemeNew);
 	
 	/************************************/
 	

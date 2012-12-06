@@ -1,14 +1,13 @@
-package wsimplementation;
+package franglish.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import bean.MotBean;
-import bean.ThemeBean;
-import wsinterface.VocabulaireService;
+import franglish.bean.MotBean;
+import franglish.bean.ThemeBean;
+import franglish.webservice.ResultatWebService;
 
-public class VocabulaireServiceImpl implements VocabulaireService {
-	
-	
+public class VocabulaireDaoImpl implements VocabulaireDao {
 
 	@Override
 	public void viderToutLeVocabulaire() {
@@ -18,8 +17,20 @@ public class VocabulaireServiceImpl implements VocabulaireService {
 
 	@Override
 	public List<ThemeBean> getListTheme() {
-		// TODO Auto-generated method stub
-		return null;
+		List<ThemeBean> listTheme = new ArrayList<ThemeBean>();
+		ThemeBean theme1 = new ThemeBean(1, "le temps");
+		ThemeBean theme2 = new ThemeBean(2, "le futur");
+		ThemeBean theme3 = new ThemeBean(3, "le cinéma");
+		ThemeBean theme4 = new ThemeBean(4, "le travail");
+		ThemeBean theme5 = new ThemeBean(5, "le voyage");
+		ThemeBean theme6 = new ThemeBean(6, "la famille");
+		listTheme.add(theme1);
+		listTheme.add(theme2);
+		listTheme.add(theme3);
+		listTheme.add(theme4);
+		listTheme.add(theme5);
+		listTheme.add(theme6);
+		return listTheme;
 	}
 
 	@Override
@@ -29,19 +40,19 @@ public class VocabulaireServiceImpl implements VocabulaireService {
 	}
 
 	@Override
-	public ResultatService addTheme(String pTheme) {
+	public ResultatWebService addTheme(String pTheme) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResultatService deleteTheme(String pTheme) {
+	public ResultatWebService deleteTheme(String pTheme) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResultatService modifyTheme(String pThemeOld, String pThemeNew) {
+	public ResultatWebService modifyTheme(String pThemeOld, String pThemeNew) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,4 +1,4 @@
-package bean;
+package franglish.bean;
 
 public class ThemeBean {
 	

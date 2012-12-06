@@ -1,11 +1,11 @@
-package wsimplementation;
+package franglish.webservice;
 
-public class ResultatService {
+public class ResultatWebService {
 
 	private boolean isOK;
 	private String erreur;
 	
-	public ResultatService(boolean pIsOK, String pErreur) {
+	public ResultatWebService(boolean pIsOK, String pErreur) {
 		isOK = pIsOK;
 		erreur = pErreur;
 	}
