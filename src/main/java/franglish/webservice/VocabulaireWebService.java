@@ -17,6 +17,9 @@ public interface VocabulaireWebService {
 	@WebMethod
 	public List<ThemeBean> getListTheme();
 	
+	@WebMethod
+	public int insertThemesOnDatabase();
+	
 	/************************************/
 	
 //	@WebMethod

@@ -42,4 +42,7 @@ public interface VocabulaireMetier {
 	
 
 	public void deleteMotDunTheme(MotBean pMotBeanOld);
+
+
+	public int insertThemesOnDatabase();
 }

@@ -26,8 +26,7 @@ public class VocabulaireMetierImpl implements VocabulaireMetier {
 
 	@Override
 	public void viderToutLeVocabulaire() {
-		// TODO Auto-generated method stub
-
+		vocabulaireDao.viderToutLeVocabulaire();
 	}
 
 	@Override
@@ -80,6 +79,11 @@ public class VocabulaireMetierImpl implements VocabulaireMetier {
 	public void deleteMotDunTheme(MotBean pMotBeanOld) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public int insertThemesOnDatabase() {
+		return vocabulaireDao.insertThemesOnDatabase();
 	}
 
 }

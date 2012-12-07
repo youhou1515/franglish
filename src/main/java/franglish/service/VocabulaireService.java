@@ -9,4 +9,6 @@ public interface VocabulaireService {
 	public void viderToutLeVocabulaire();
 
 	public List<ThemeBean> getListTheme();
+	
+	public int insertThemesOnDatabase();
 }

@@ -14,6 +14,8 @@ public interface VocabulaireDao {
 
 	public List<ThemeBean> getListTheme();
 	
+	public int insertThemesOnDatabase();
+	
 	/************************************/
 	
 

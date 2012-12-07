@@ -2,6 +2,7 @@ package franglish.webservice;
 
 import java.util.List;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,32 +21,24 @@ public class VocabulaireWebServiceImpl implements VocabulaireWebService {
 
 	@Override
 	public void viderToutLeVocabulaire() {
-		// TODO Auto-generated method stub
-
+		vocabulaireService.viderToutLeVocabulaire();
 	}
 
 	@Override
 	public List<ThemeBean> getListTheme() {
-		
-//		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//		context.scan("franglish");
-//		context.refresh();
-//		
-//		VocabulaireMetier vocabulaireMetierLocal = (VocabulaireMetier) context.getBean("VocabulaireMetier.class");
-//		vocabulaireMetierLocal.getListTheme();
-		
-		
 		return vocabulaireService.getListTheme();
 	}
-
 	
 	public void setVocabulaireService(VocabulaireService vocabulaireService) {
 		this.vocabulaireService = vocabulaireService;
 	}
 
-	
-	
-	
+	@Override
+	public int insertThemesOnDatabase() {
+		return vocabulaireService.insertThemesOnDatabase();
+	}
+
+
 //	@Override
 //	public ThemeBean getTheme(String pTheme) {
 //		// TODO Auto-generated method stub
