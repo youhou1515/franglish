@@ -70,6 +70,8 @@
 			</plugins>
 		</pluginManagement>
 
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
@@ -83,6 +85,8 @@
 					</dependency>
 				</dependencies>
 				<executions>
+
+					<!-- ********************** JAVA TO WSDL **************************** -->
 					<execution>
 						<id>generate-wsdl</id>
 						<phase>process-classes</phase>
@@ -95,8 +99,28 @@
 							<goal>java2wsdl</goal>
 						</goals>
 					</execution>
+
+					<!-- ********************** WSDL TO JAVA **************************** -->
+
+					<!-- <execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<sourceRoot>/target</sourceRoot>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>/target/generated-sources/VocabulaireWebService.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+					</execution> -->
 				</executions>
 			</plugin>
+
+
 		</plugins>
 	</build>
 </project>
